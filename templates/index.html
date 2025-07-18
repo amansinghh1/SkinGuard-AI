@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkinGuard</title>
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+  <div class="hero-container">
+    <div class="overlay">
+      <h1><span class="highlight">Early Detection</span> <br /><span class="saves">Saves Lives</span></h1>
+      <p>Get instant AI-powered skin cancer screening from the comfort of your home. Upload a photo and receive preliminary analysis in seconds.</p>
+      <div class="buttons">
+        <a href="/analyze"><button>Start Analysis</button></a>
+        <button class="secondary">Learn More</button>
+      </div>
+
+      <!-- Feature cards in one row -->
+      <div class="features-row">
+        <div class="feature-card">
+          <div>🧠</div>
+          <h3>AI-Powered Analysis</h3>
+          <p>Advanced machine learning for accurate skin lesion detection</p>
+        </div>
+        <div class="feature-card">
+          <div>⏱️</div>
+          <h3>Instant Results</h3>
+          <p>Get preliminary analysis results in seconds, not days</p>
+        </div>
+        <div class="feature-card">
+          <div>🔒</div>
+          <h3>Privacy First</h3>
+          <p>Your images are processed securely and never stored</p>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="disclaimer">
+        <strong>Medical Disclaimer:</strong> This tool provides preliminary screening only and is not a substitute for professional medical diagnosis. Always consult with a qualified dermatologist for proper evaluation and treatment of any skin concerns.
+      </div>
+    </div>
+  
+
+  <!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-sections">
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <h4><span style="color: #00ff66;">&#10084;</span> SkinGuard AI</h4>
+      <p>
+        Empowering early detection through advanced AI technology.<br>
+        Your partner in proactive skin health monitoring.
+      </p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h4>Important Information</h4>
+      <ul>
+        <li>This is a screening tool, not a diagnostic device</li>
+        <li>Always consult healthcare professionals</li>
+        <li>Regular self-examinations are recommended</li>
+        <li>Seek immediate care for concerning changes</li>
+      </ul>
+    </div>
+
+  <!-- Bottom line -->
+  <div class="footer-bottom">
+    
+    <p>© 2024 SkinGuard AI. This tool is for educational and screening purposes only. Not intended for medical diagnosis or treatment decisions.</p>
+  </div>
+</footer>
+
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const footer = document.getElementById('sticky-footer');
+      if (window.scrollY > 100) {
+        footer.style.display = 'flex';
+      } else {
+        footer.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

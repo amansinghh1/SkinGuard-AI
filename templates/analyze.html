@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SkinGuard</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #1a1a1a;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    input[type="file"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px 25px;
+      background-color: #0077b6;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005f8a;
+    }
+
+    .result {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .result img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .info-box, .disclaimer {
+      background: #e6f2ff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 25px;
+      font-size: 14px;
+      color: #1a1a1a;
+    }
+
+    .info-box ul {
+      padding-left: 20px;
+    }
+
+    .new-analysis {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>SkinGuard AI Analysis</h1>
+
+    <a href="{{ url_for('home') }}" class="back-home-sticky">← Back to Home</a>
+
+
+    {% if result %}
+      <div class="result">
+        <h2>Prediction: <span>{{ result }}</span></h2>
+        <p>Confidence Score: {{ confidence | round(2) * 100 }}%</p>
+        <img src="{{ image_path }}" alt="Uploaded Image">
+      </div>
+
+      <div class="info-box">
+        <strong>Tips for Best Results:</strong>
+        <ul>
+          <li>Ensure good lighting when taking the photo</li>
+          <li>Take the photo close enough to see details clearly</li>
+          <li>Avoid shadows or reflections on the skin</li>
+          <li>Include a reference object (like a coin) for size comparison</li>
+        </ul>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Important:</strong> This AI analysis is for informational purposes only and should not replace professional medical advice. Always consult with a qualified dermatologist for proper diagnosis and treatment.
+      </div>
+
+      <div class="new-analysis">
+        <form action="{{ url_for('analyze') }}" method="get">
+          <button type="submit">New Analysis</button>
+        </form>
+      </div>
+    {% else %}
+      <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Start Analysis</button>
+      </form>
+
+      <div class="info-box">
+        <strong>Tips for Best Results:</strong>
+        <ul>
+          <li>Ensure good lighting when taking the photo</li>
+          <li>Take the photo close enough to see details clearly</li>
+          <li>Avoid shadows or reflections on the skin</li>
+          <li>Include a reference object (like a coin) for size comparison</li>
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
