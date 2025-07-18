@@ -31,4 +31,28 @@ SkinGuard AI is a deep learning-powered web application that provides **early sc
 ---
 
 ## 📁 Project Structure
-<pre> ``` SkinGuard_Complete_Project/ ├── app.py # Main Flask application ├── train_model.py # Script to train the model (optional) ├── preprocess.py # Image preprocessing logic ├── requirements.txt # Python dependencies ├── README.md # Project documentation ├── .gitignore # Ignore list (model, venv, etc.) │ ├── model/ │ └── skin_cancer.h5 # Trained ML model (excluded from GitHub) │ ├── static/ │ ├── css/ │ │ └── style.css # Stylesheet for all pages │ │ │ ├── images/ │ │ └── bg.png # Background image │ │ │ └── uploads/ │ └── ... # User uploaded images (generated at runtime) │ ├── templates/ │ ├── index.html # Landing page │ └── analyze.html # Result page with predictions ``` </pre>
+
+```
+SkinGuard_Complete_Project/
+├── app.py                     # Main Flask application
+├── train_model.py             # (Optional) Script to train the model
+├── preprocess.py              # Image preprocessing logic
+├── requirements.txt           # Python dependencies
+├── README.md                  # Project documentation
+├── .gitignore                 # Git ignore file (model, venv, etc.)
+
+├── model/
+│   └── skin_cancer.h5         # Trained model (excluded from GitHub)
+
+├── static/
+│   ├── css/
+│   │   └── style.css          # CSS styles
+│   ├── images/
+│   │   └── bg.png             # Background image
+│   └── uploads/
+│       └── (Uploaded images)  # Temporarily stored uploaded images
+
+├── templates/
+│   ├── index.html             # Landing page with background
+│   └── analyze.html           # Prediction page
+```
