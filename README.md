@@ -1,12 +1,12 @@
 # 🛡️ SkinGuard AI - Skin Cancer Detection Web App
 
-SkinGuard AI is a deep learning-powered web application that provides **early screening** of skin cancer using image classification techniques. Built with **Flask**, **TensorFlow**, and a clean modern UI, this tool allows users to upload or capture images of skin lesions and receive instant AI-based predictions.
+SkinGuard AI is a deep learning-powered web application that provides **early screening** of skin cancer using image classification techniques. Built with **Flask**, **TensorFlow**, and a clean modern UI, this tool allows users to upload images of skin lesions and receive instant AI-based predictions.
 
 ---
 
 ## 🚀 Features
 
-- 📷 Upload or take a live photo for analysis
+- 📷 Upload photo for analysis
 - 🤖 Deep learning model (CNN) predicts: **Benign** or **Malignant**
 - 📊 Displays confidence score
 - ⚠️ Medical disclaimer for ethical guidance
@@ -31,3 +31,4 @@ SkinGuard AI is a deep learning-powered web application that provides **early sc
 ---
 
 ## 📁 Project Structure
+
