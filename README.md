@@ -26,7 +26,7 @@ SkinGuard AI is a deep learning-powered web application that provides **early sc
 - **Training**: Done in Google Colab using GPU  
 - **File**: `skin_cancer.h5` (~127 MB) [Stored in Google Drive due to GitHub size limits]
 
-👉 [📥 Download Model]((https://drive.google.com/file/d/1j-6ez6DH1fupdQFawAg8ANJX7P03a6dr/view?usp=drive_link)) and place in: `model/skin_cancer.h5`
+👉 [📥 Download Model](https://drive.google.com/file/d/1j-6ez6DH1fupdQFawAg8ANJX7P03a6dr/view?usp=drive_link) and place in: `model/skin_cancer.h5`
 
 ---
 
